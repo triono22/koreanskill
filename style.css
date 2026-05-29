@@ -398,7 +398,126 @@ h3 { font-size: 1.5rem; font-weight: 600; }
 .mt-1 { margin-top: 10px; }
 .hidden { display: none !important; }
 
+/* Admisi Tabs Styles */
+.admisi-tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.admisi-tab-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.admisi-tab-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+    border-color: var(--accent-glow);
+    color: var(--accent-glow);
+}
+
+.admisi-tab-btn.active {
+    background: var(--accent-glow);
+    color: var(--bg-dark);
+    border-color: var(--accent-glow);
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Tab Contents Display */
+.admisi-tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.admisi-tab-content.active {
+    display: block;
+}
+
+/* Admisi Table Styles */
+.admisi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.admisi-table th, .admisi-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admisi-table th {
+    background: rgba(255, 255, 255, 0.03);
+    font-family: var(--font-heading);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.admisi-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Admisi Flow / Steps */
+.admisi-flow {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.flow-step {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.flow-step:hover {
+    transform: translateY(-3px);
+    border-color: rgba(100, 255, 218, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.flow-num {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent-glow);
+    font-family: var(--font-heading);
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+.flow-step h4 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--white);
+}
+
+.flow-step p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+
 /* Responsive */
+@media (max-width: 992px) {
+    .admisi-flow {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -416,4 +535,12 @@ h3 { font-size: 1.5rem; font-weight: 600; }
     .hero-buttons { flex-direction: column; }
     .map-container, .grid-2, .timeline-2x2, .calc-grid { grid-template-columns: 1fr; }
     .bar-chart { height: 150px; }
+    
+    .admisi-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .admisi-table th, .admisi-table td {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
 }

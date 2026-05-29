@@ -222,70 +222,27 @@ Mohon info pendaftarannya.`;
     nextStep('result');
 }
 
-// --- Fetch Edukasi News from Google Sheets ---
-const SHEET_ID = '1PXvDrCrO3lG0jDFQ9SH94Qa7iumKNvMXeR83jGOYWHw';
-const sheetUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+// --- Admisi Tab System ---
+const admisiTabBtns = document.querySelectorAll('.admisi-tab-btn');
+const admisiTabContents = document.querySelectorAll('.admisi-tab-content');
 
-async function fetchEdukasiNews() {
-    const container = document.getElementById('edukasi-news-container');
-    if (!container) return;
-
-    try {
-        const response = await fetch(sheetUrl);
-        const text = await response.text();
-        
-        // Strip the JSONP callback wrapper using regex to safely get the JSON object
-        const match = text.match(/\{[\s\S]*\}/);
-        if (!match) {
-            throw new Error("Invalid response format");
-        }
-        
-        const jsonString = match[0];
-        const data = JSON.parse(jsonString);
-        let rows = data.table.rows;
-        
-        container.innerHTML = ''; // Clear loading text
-        
-        if (rows.length === 0) {
-            container.innerHTML = '<p style="text-align: center; width: 100%; grid-column: 1 / -1;">Belum ada berita yang tersedia.</p>';
-            return;
-        }
-
-        // Skip the header row if it exists
-        if (rows[0] && rows[0].c && rows[0].c[0] && rows[0].c[0].v === 'Kategori') {
-            rows = rows.slice(1);
-        }
-
-        // Column mapping: A=Kategori, B=Judul, C=Ringkasan, D=Link
-        rows.forEach(row => {
-            if (!row || !row.c) return;
-            const kategori = row.c[0] && row.c[0].v ? row.c[0].v : 'Info';
-            const judul = row.c[1] && row.c[1].v ? row.c[1].v : '';
-            const ringkasan = row.c[2] && row.c[2].v ? row.c[2].v : '';
-            const link = row.c[3] && row.c[3].v ? row.c[3].v : '#';
-
-            if(!judul) return; // Skip empty rows
-
-            const article = document.createElement('article');
-            article.className = 'blog-card glass-panel';
-            article.innerHTML = `
-                <span class="category">${kategori}</span>
-                <h3>${judul}</h3>
-                <p>${ringkasan}</p>
-                <a href="${link}" class="read-more" target="_blank">Baca Selengkapnya &rarr;</a>
-            `;
-            container.appendChild(article);
+if (admisiTabBtns.length > 0) {
+    admisiTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetTabId = btn.getAttribute('data-tab');
+            
+            // Toggle active button
+            admisiTabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Toggle active content
+            admisiTabContents.forEach(content => {
+                if (content.id === targetTabId) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
         });
-
-    } catch (error) {
-        console.error('Error fetching Google Sheets data:', error);
-        container.innerHTML = '<p style="text-align: center; width: 100%; grid-column: 1 / -1; color: #ff6b6b;">Gagal memuat berita. Pastikan perangkat Anda terhubung ke internet dan Google Sheet berstatus Public.</p>';
-    }
-}
-
-// Ensure the fetch runs
-if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', fetchEdukasiNews);
-} else {
-    fetchEdukasiNews();
+    });
 }

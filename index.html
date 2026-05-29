@@ -26,7 +26,7 @@
                 <a href="#home" class="nav-link active" data-target="home-view">Profil Perusahaan</a>
                 <a href="#vokasi" class="nav-link" data-target="vokasi-view">Vokasi Teknik (D-2)</a>
                 <a href="#cyber" class="nav-link" data-target="cyber-view">Cyber University</a>
-                <a href="#edukasi" class="nav-link" data-target="edukasi-view">Pusat Edukasi</a>
+                <a href="#admisi" class="nav-link" data-target="admisi-view">Admisi</a>
             </div>
             <div class="nav-cta">
                 <button class="btn btn-primary" id="btn-eligibility-nav">Cek Kelayakan</button>
@@ -281,21 +281,314 @@
             </section>
         </section>
 
-        <!-- ==================== EDUKASI VIEW ==================== -->
-        <section id="edukasi-view" class="view-section hidden">
-            <header class="page-header text-center padding-y">
-                <div class="container">
-                    <h1>Portal <span class="highlight">Edukasi</span></h1>
-                    <p>Wawasan mendalam seputar sistem pendidikan, visa, dan prospek karir di Korea Selatan.</p>
+        <!-- ==================== ADMISI VIEW ==================== -->
+        <section id="admisi-view" class="view-section hidden">
+            <header class="hero-section" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.95)), url('assets/cyber_university.png'); min-height: 50vh; padding: 120px 20px 60px;">
+                <div class="hero-content">
+                    <span class="badge badge-cyan">Sejong Cyber University — Global Center</span>
+                    <h1>Portal Informasi <span class="highlight-cyan">Admisi & Pendaftaran</span></h1>
+                    <p>Persyaratan lengkap, berkas dokumen wajib, tahapan prosedur, dan sistem pembelajaran mahasiswa asing di Korea Selatan.</p>
                 </div>
             </header>
-            <section class="container padding-y">
-                <div class="blog-grid" id="edukasi-news-container">
-                    <div style="text-align: center; width: 100%; grid-column: 1 / -1; padding: 40px; color: var(--text-muted);">
-                        <p>Memuat berita terbaru dari database...</p>
+
+            <!-- Sub-Tabs Navigation -->
+            <div class="container" style="margin-top: -30px; position: relative; z-index: 10;">
+                <div class="admisi-tabs-container">
+                    <button class="admisi-tab-btn active" data-tab="admisi-panduan">📋 Panduan</button>
+                    <button class="admisi-tab-btn" data-tab="admisi-dokumen">📁 Dokumen</button>
+                    <button class="admisi-tab-btn" data-tab="admisi-prosedur">🪜 Tahapan</button>
+                    <button class="admisi-tab-btn" data-tab="admisi-pembelajaran">💻 Pembelajaran</button>
+                </div>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="container padding-y" style="padding-top: 50px;">
+                
+                <!-- Tab: Panduan -->
+                <div id="admisi-panduan" class="admisi-tab-content active">
+                    <div class="grid-2">
+                        <div class="glass-panel">
+                            <h3>① Mahasiswa Baru (Tahun 1)</h3>
+                            <ul class="feature-list" style="margin-top: 15px;">
+                                <li>Lulusan SMA/SMK atau calon lulusan tahun ini.</li>
+                                <li>Kualifikasi akademis setara pendidikan menengah atas.</li>
+                                <li>Dapat mendaftar dari luar negeri tanpa visa aktif.</li>
+                                <li>Terbuka lebar untuk seluruh mahasiswa internasional.</li>
+                            </ul>
+                        </div>
+                        <div class="glass-panel">
+                            <h3>② Pindahan / Transfer (Tahun 2–3)</h3>
+                            <ul class="feature-list" style="margin-top: 15px;">
+                                <li>Lulusan program Diploma (D-3) atau universitas lain.</li>
+                                <li>Telah menyelesaikan sejumlah kredit SKS yang ditentukan.</li>
+                                <li>Berlaku baik untuk universitas dalam maupun luar negeri.</li>
+                                <li>Skema biaya kuliah hemat seperti program regular 4 tahun.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid-2" style="margin-top: 30px;">
+                        <div class="glass-panel">
+                            <h3>🎁 Program Beasiswa Khusus</h3>
+                            <ul class="feature-list" style="margin-top: 15px;">
+                                <li><strong>Mahasiswa Dalam Negeri (Korea):</strong> Beasiswa 50% (~750.000 Won / semester).</li>
+                                <li><strong>Mahasiswa Luar Negeri:</strong> Beasiswa 80% (~300.000 Won / semester).</li>
+                                <li>Beasiswa potongan 80% tersebut dijamin berlaku secara kontinu hingga Anda lulus.</li>
+                                <li>Tersedia juga beasiswa tambahan berdasarkan prestasi nilai IPK tiap semester.</li>
+                            </ul>
+                        </div>
+                        <div class="glass-panel">
+                            <h3>🛂 Keuntungan Visa & Keimigrasian</h3>
+                            <ul class="feature-list" style="margin-top: 15px;">
+                                <li>Diakui sebagai poin akademis bernilai tinggi untuk pengajuan visa menetap <strong>E-7-4</strong>.</li>
+                                <li>Ijazah resmi SJCU diakui penuh untuk proses aplikasi visa tinggal tetap <strong>F-5-10</strong>.</li>
+                                <li>Mendapatkan surat rekomendasi resmi untuk visa belajar <strong>D-2 (Student Visa)</strong>.</li>
+                                <li>Dukungan surat undangan keluarga/pribadi untuk alumni di luar negeri.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel" style="margin-top: 30px; text-align: center;">
+                        <h3>🎯 Prioritas & Target Utama Pendaftar</h3>
+                        <div class="majors-tags" style="justify-content: center; margin-top: 15px;">
+                            <span class="tag">Peserta EPS-TOPIK</span>
+                            <span class="tag">Pemegang Visa Kerja E-9</span>
+                            <span class="tag">Direkomendasikan Lembaga Mitra</span>
+                            <span class="tag">Calon Pemegang Visa Keluarga F-6</span>
+                            <span class="tag">Warga Negara Korea Kembali dari Luar Negeri</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 45px;">
+                        <a href="https://cms.sjcu.ac.kr/global/program/admission.do" target="_blank" class="btn btn-outline">🔗 Lihat Sumber Asli (Bahasa Korea)</a>
                     </div>
                 </div>
-            </section>
+
+                <!-- Tab: Dokumen -->
+                <div id="admisi-dokumen" class="admisi-tab-content">
+                    <div class="glass-panel">
+                        <h3 style="margin-bottom: 20px;">📄 Kelengkapan Berkas: Mahasiswa Baru (신입학)</h3>
+                        <div style="overflow-x: auto;">
+                            <table class="admisi-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 80px;">No</th>
+                                        <th>Nama Berkas Dokumen</th>
+                                        <th>Penjelasan Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><strong>Formulir Pendaftaran Online</strong></td>
+                                        <td>Diisi secara lengkap melalui portal registrasi resmi SJCU.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><strong>Ijazah SMA / SMK Asli</strong></td>
+                                        <td>Ijazah kelulusan asli atau Surat Keterangan Lulus (SKL) yang dilegalisir.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><strong>Transkrip Nilai Akademik</strong></td>
+                                        <td>Daftar nilai rapor atau ujian sekolah menengah atas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><strong>Salinan Paspor</strong></td>
+                                        <td>Fotokopi halaman data diri paspor yang masih aktif.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><strong>Pasfoto Digital</strong></td>
+                                        <td>Foto terbaru background putih berstandar paspor.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td><strong>Sertifikat EPS-TOPIK / Bahasa</strong></td>
+                                        <td>Melampirkan sertifikat bahasa (jika ada) untuk poin penilaian ekstra.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel" style="margin-top: 30px;">
+                        <h3 style="margin-bottom: 20px;">📄 Kelengkapan Berkas: Pindahan / Transfer (편입학)</h3>
+                        <div style="overflow-x: auto;">
+                            <table class="admisi-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 80px;">No</th>
+                                        <th>Nama Berkas Dokumen</th>
+                                        <th>Penjelasan Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><strong>Ijazah Kampus Asal</strong></td>
+                                        <td>Ijazah kelulusan D-3 / Diploma atau bukti penyelesaian SKS di kampus 4 tahun.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><strong>Transkrip Nilai Universitas</strong></td>
+                                        <td>Transkrip nilai resmi dari seluruh semester yang pernah dijalani sebelumnya.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><strong>Dokumen Penyetaraan/Pengakuan SKS</strong></td>
+                                        <td>Surat keterangan dari perguruan tinggi sebelumnya (bila dibutuhkan).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel highlight-border" style="margin-top: 30px; background: rgba(230, 57, 70, 0.08); border-color: rgba(230, 57, 70, 0.3);">
+                        <p style="margin: 0; font-size: 0.95rem; color: #ff8a93; display: flex; gap: 10px; align-items: flex-start;">
+                            <span style="font-size: 1.2rem;">⚠️</span>
+                            <span><strong>PENTING:</strong> Berkas dokumen pendidikan dari luar Korea Selatan wajib diterjemahkan ke dalam Bahasa Inggris/Korea oleh penerjemah tersumpah dan dilegalisir melalui jalur Apostille atau Legalisasi Konsuler Kedutaan.</span>
+                        </p>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 45px;">
+                        <a href="https://cms.sjcu.ac.kr/global/program/documents.do" target="_blank" class="btn btn-outline">🔗 Lihat Sumber Asli (Bahasa Korea)</a>
+                    </div>
+                </div>
+
+                <!-- Tab: Prosedur -->
+                <div id="admisi-prosedur" class="admisi-tab-content">
+                    <div class="glass-panel" style="margin-bottom: 40px; overflow-x: auto; padding: 40px 30px;">
+                        <h3 class="text-center" style="margin-bottom: 35px;">🪜 7 Langkah Mudah Proses Pendaftaran</h3>
+                        <div class="admisi-flow">
+                            <div class="flow-step">
+                                <div class="flow-num">01</div>
+                                <h4>Jadwal</h4>
+                                <p>Periksa batas waktu & jadwal gelombang pendaftaran.</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-num">02</div>
+                                <h4>Dokumen</h4>
+                                <p>Mempersiapkan dokumen dan legalisir berkas.</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-num">03</div>
+                                <h4>Formulir</h4>
+                                <p>Mengisi formulir registrasi online di portal SJCU.</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-num">04</div>
+                                <h4>Hasil</h4>
+                                <p>Pengumuman kelulusan berkas admin & wawancara.</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-num">05</div>
+                                <h4>Biaya</h4>
+                                <p>Pembayaran tagihan registrasi uang kuliah.</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-num">06</div>
+                                <h4>Matkul</h4>
+                                <p>Pemilihan dan pengisian rencana KRS kelas online.</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-num">07</div>
+                                <h4>Mulai</h4>
+                                <p>Mengikuti perkuliahan aktif secara digital.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="glass-panel">
+                            <h3>📝 Panduan Detail Tahapan</h3>
+                            <ul class="feature-list" style="margin-top: 15px; font-size: 0.95rem;">
+                                <li><strong>Tahap 1-3:</strong> Pastikan Anda mengisi form sebelum tanggal penutupan gelombang pendaftaran aktif dan mengunggah pindaian (scan) berkas asli dalam format PDF beresolusi baik.</li>
+                                <li><strong>Tahap 4-5:</strong> Setelah pengumuman kelulusan, Anda akan mendapatkan NIM & virtual account untuk melakukan registrasi pembayaran semester pertama.</li>
+                                <li><strong>Tahap 6-7:</strong> Orientasi mahasiswa baru dilakukan secara online. Tim pusat bantuan global akan membimbing Anda menyusun jadwal KRS.</li>
+                            </ul>
+                        </div>
+                        <div class="glass-panel text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px;">
+                            <h3>Siap Memulai Pendidikan Global Anda?</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; margin-top: 10px;">Daftarkan diri Anda sekarang juga tanpa perlu meninggalkan tanah air atau pekerjaan aktif Anda di Indonesia.</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 320px;">
+                                <a href="https://go.sjcu.ac.kr/go/admission-uni/applyStep1.do" target="_blank" class="btn btn-primary" style="font-weight: 700; padding: 14px 20px;">🖊 Daftar Online Sekarang</a>
+                                <a href="https://wa.me/821084690945?text=Halo%20Admin%20PT%20Songmun%20KoreanSkill,%20saya%20tertarik%20untuk%20mendaftar%20kuliah%20online%20di%20Sejong%20Cyber%20University.%20Mohon%20informasi%20mengenai%20prosedur%20admisi%20terbaru." target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; padding: 14px 20px;">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                                    </svg> Hubungi via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 45px;">
+                        <a href="https://cms.sjcu.ac.kr/global/program/procedure.do" target="_blank" class="btn btn-outline">🔗 Lihat Sumber Asli (Bahasa Korea)</a>
+                    </div>
+                </div>
+
+                <!-- Tab: Pembelajaran -->
+                <div id="admisi-pembelajaran" class="admisi-tab-content">
+                    <div class="section-header text-center" style="margin-bottom: 45px;">
+                        <h2>💻 Metode Perkuliahan Modern & Fleksibel</h2>
+                        <p>Didesain secara khusus untuk menunjang pembelajaran 100% online dari luar negeri.</p>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="glass-panel">
+                            <div class="icon">🌐</div>
+                            <h3>Akses Online 100%</h3>
+                            <p>Kuliah dan seluruh interaksi akademik berlangsung 100% secara daring tanpa kendala jarak geografis.</p>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="icon">📱</div>
+                            <h3>Lintas Platform</h3>
+                            <p>Dapat diakses nyaman melalui Personal Computer (PC), laptop, tablet, hingga smartphone Anda.</p>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="icon">🎬</div>
+                            <h3>Video & Materi Digital</h3>
+                            <p>Materi disampaikan via rekaman video interaktif dan modul online yang bisa diakses berulang-ulang.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-grid" style="margin-top: 25px;">
+                        <div class="glass-panel">
+                            <div class="icon">📝</div>
+                            <h3>Ujian & Tugas Online</h3>
+                            <p>Sistem pengumpulan tugas mingguan, kuis, dan ujian akhir semester diselenggarakan praktis lewat platform LMS.</p>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="icon">💬</div>
+                            <h3>Interaksi Forum Diskusi</h3>
+                            <p>Tersedia forum tanya jawab interaktif untuk berkomunikasi dengan para dosen pakar dan sesama mahasiswa asing.</p>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="icon">📊</div>
+                            <h3>Kemudahan Pantau Nilai</h3>
+                            <p>Progres pengerjaan tugas, presensi kehadiran kuliah, serta nilai ujian dapat dipantau real-time kapan saja.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel" style="margin-top: 40px; text-align: center;">
+                        <h3 style="margin-bottom: 15px;">🛠️ Sistem Layanan Dukungan Mahasiswa</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Kami memberikan jaminan kelancaran perkuliahan Anda melalui infrastruktur IT pendukung lengkap:</p>
+                        <div class="majors-tags" style="justify-content: center;">
+                            <span class="tag">💻 Remote PC Support (Bantuan Jarak Jauh)</span>
+                            <span class="tag">❓ Pusat FAQ Portal Lengkap</span>
+                            <span class="tag">📩 Konsultasi Online Real-Time</span>
+                            <span class="tag">🌍 Divisi Mahasiswa Internasional Khusus</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 45px;">
+                        <a href="https://cms.sjcu.ac.kr/global/program/learning.do" target="_blank" class="btn btn-outline">🔗 Lihat Sumber Asli (Bahasa Korea)</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
     </main>
