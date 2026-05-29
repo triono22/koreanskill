@@ -449,11 +449,14 @@ h3 { font-size: 1.5rem; font-weight: 600; }
     margin-top: 15px;
     text-align: left;
     font-size: 0.95rem;
+    table-layout: fixed; /* Ensures rigid column widths */
 }
 
 .admisi-table th, .admisi-table td {
     padding: 14px 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+    word-wrap: break-word; /* Allows proper wrapping inside cells */
 }
 
 .admisi-table th {
@@ -465,6 +468,28 @@ h3 { font-size: 1.5rem; font-weight: 600; }
 
 .admisi-table tr:hover {
     background: rgba(255, 255, 255, 0.02);
+}
+
+/* Perfect alignment and spacing for Document Tables */
+.admisi-table th:first-child,
+.admisi-table td:first-child {
+    width: 80px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.admisi-table th:nth-child(2),
+.admisi-table td:nth-child(2) {
+    width: 35%;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.admisi-table th:nth-child(3),
+.admisi-table td:nth-child(3) {
+    width: 55%;
+    color: var(--text-main);
 }
 
 /* Admisi Flow / Steps */
