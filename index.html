@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Songmun KoreanSkill | Konsultan Edukasi Korea</title>
+    <meta name="description" content="Pionir konsultan edukasi spesialis Vokasi Teknik D-2 & Cyber University Korea di Indonesia. Kuliah ke Korea hemat biaya dan langsung kerja.">
+    <!-- Google Fonts: Plus Jakarta Sans & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Songmun <span class="highlight">KoreanSkill</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="https://koreanskill.pythonanywhere.com/" target="_blank" class="cyber-menu-link">
+                    <img src="assets/master_logo.png" alt="Cyber Logo" class="cyber-logo">
+                    성문사이버학원
+                </a>
+                <a href="#home" class="nav-link active" data-target="home-view">Profil Perusahaan</a>
+                <a href="#vokasi" class="nav-link" data-target="vokasi-view">Vokasi Teknik (D-2)</a>
+                <a href="#cyber" class="nav-link" data-target="cyber-view">Cyber University</a>
+                <a href="#edukasi" class="nav-link" data-target="edukasi-view">Pusat Edukasi</a>
+            </div>
+            <div class="nav-cta">
+                <button class="btn btn-primary" id="btn-eligibility-nav">Cek Kelayakan</button>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main SPA Container -->
+    <main id="app-container">
+        
+        <!-- ==================== HOME VIEW ==================== -->
+        <section id="home-view" class="view-section active">
+            <!-- Hero -->
+            <header class="hero-section" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.95)), url('assets/hero_background.png');">
+                <div class="hero-content">
+                    <span class="badge">Konsultan Edukasi Korea #1 di Indonesia</span>
+                    <h1>Raih Masa Depan Global di <span class="highlight-cyan">Korea Selatan</span></h1>
+                    <p>PT Songmun KoreanSkill adalah pionir konsultan spesialis jalur Vokasi Teknik (D-2) dan Cyber University. Kami merancang rute pendidikan paling strategis untuk karir internasional Anda.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg" onclick="document.querySelector('[data-target=\'vokasi-view\']').click()">Jalur Vokasi D-2</button>
+                        <button class="btn btn-outline btn-lg" onclick="document.querySelector('[data-target=\'cyber-view\']').click()">Jalur Cyber University</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Tentang Kami -->
+            <section class="about-section container">
+                <div class="section-header text-center">
+                    <h2>Tentang <span class="highlight">Kami</span></h2>
+                    <p>Dedikasi dari para praktisi dan alumni untuk generasi profesional Indonesia.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card glass-panel">
+                        <div class="icon">🎓</div>
+                        <h3>Alumni Korea</h3>
+                        <p>Tim kami terdiri dari alumni universitas terkemuka di Korea yang memahami seluk-beluk sistem akademik dan kehidupan di sana.</p>
+                    </div>
+                    <div class="about-card glass-panel">
+                        <div class="icon">⚙️</div>
+                        <h3>Praktisi Otomasi</h3>
+                        <p>Kami memiliki latar belakang kuat di industri teknik dan otomasi, memastikan jurusan yang Anda pilih relevan dengan kebutuhan industri.</p>
+                    </div>
+                    <div class="about-card glass-panel">
+                        <div class="icon">🤝</div>
+                        <h3>Koneksi Industri</h3>
+                        <p>Menjembatani lulusan dengan peluang magang dan kerja nyata (E-7) melalui jaringan perusahaan manufaktur Korea.</p>
+                    </div>
+                    <div class="about-card glass-panel">
+                        <div class="icon">⚖️</div>
+                        <h3>Legal & Terpercaya</h3>
+                        <p>Perusahaan resmi berbadan hukum di Indonesia, memberikan jaminan transparansi dan keamanan pengurusan dokumen.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Map & Universities -->
+            <section class="map-section container">
+                <div class="section-header text-center">
+                    <h2>Jaringan <span class="highlight">16 Universitas & 14 Jurusan</span></h2>
+                    <p>Jelajahi opsi kampus terbaik di seluruh penjuru Korea Selatan secara interaktif.</p>
+                </div>
+                <div class="map-container">
+                    <div class="map-visual">
+                        <!-- Placeholder for SVG Map, drawn via CSS/JS or actual SVG -->
+                        <div id="korea-map-svg">
+                            <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Simplified Korea Outline -->
+                                <path d="M150,50 L200,80 L250,70 L280,120 L300,200 L320,300 L350,350 L340,400 L360,450 L300,500 L250,550 L180,550 L150,500 L100,450 L80,400 L50,350 L60,250 L100,150 Z" fill="#1B365D" stroke="#00B4D8" stroke-width="2" opacity="0.8"/>
+                                <!-- City Pins (Seoul, Busan, Daegu, Incheon, Gwangju, Daejeon) -->
+                                <circle cx="150" cy="180" r="6" class="map-pin" data-city="Seoul" fill="#64FFDA" />
+                                <text x="165" y="185" fill="#fff" font-size="12">Seoul</text>
+                                
+                                <circle cx="130" cy="190" r="5" class="map-pin" data-city="Incheon" fill="#64FFDA" />
+                                <text x="75" y="195" fill="#fff" font-size="12">Incheon</text>
+                                
+                                <circle cx="280" cy="400" r="5" class="map-pin" data-city="Daegu" fill="#64FFDA" />
+                                <text x="295" y="405" fill="#fff" font-size="12">Daegu</text>
+                                
+                                <circle cx="310" cy="480" r="6" class="map-pin" data-city="Busan" fill="#64FFDA" />
+                                <text x="325" y="485" fill="#fff" font-size="12">Busan</text>
+                                
+                                <circle cx="180" cy="450" r="5" class="map-pin" data-city="Gwangju" fill="#64FFDA" />
+                                <text x="120" y="455" fill="#fff" font-size="12">Gwangju</text>
+
+                                <circle cx="180" cy="280" r="5" class="map-pin" data-city="Chungcheong" fill="#64FFDA" />
+                                <text x="195" y="285" fill="#fff" font-size="12">Chungnam</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="map-info glass-panel">
+                        <h3 id="info-city-name">Pilih Wilayah</h3>
+                        <p id="info-city-desc">Klik titik pada peta untuk melihat daftar universitas di wilayah tersebut.</p>
+                        <ul id="info-uni-list" class="uni-list">
+                            <!-- Populated by JS -->
+                            <li><em>Silakan pilih pin di peta.</em></li>
+                        </ul>
+                        <div class="majors-tags">
+                            <span class="tag">Future Electric Vehicle (미래전기자동차과)</span>
+                            <span class="tag">Future Automotive Engineering (미래자동차공학부)</span>
+                            <span class="tag">Textile & Fashion Business (섬유패션비즈니스학과)</span>
+                            <span class="tag">Global Textile & Fashion Business (글로벌섬유패션비즈니스과)</span>
+                            <span class="tag">Electrical Engineering (전기공학과)</span>
+                            <span class="tag">Automotive Machinery (자동차기계과)</span>
+                            <span class="tag">스마트CAD/CAM과</span>
+                            <span class="tag">Special Construction Machinery Engineering (특수건설기계공학부)</span>
+                            <span class="tag">Mechanical Engineering (기계과)</span>
+                            <span class="tag">Automotive Engineering (자동차과)</span>
+                            <span class="tag">Smart Agri-Food (스마트농식품과)</span>
+                            <span class="tag">New & Renewable Energy Electrical (신재생에너지전기과)</span>
+                            <span class="tag">Future Mobility (미래모비리티학과)</span>
+                            <span class="tag">Electrical Engineering (전기공학과)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Legalitas -->
+            <section class="legal-section container">
+                <div class="legal-box glass-panel text-center">
+                    <h2>Legalitas & Kontak Resmi</h2>
+                    <p>PT Songmun KoreanSkill adalah perusahaan terdaftar dan memiliki izin operasional resmi.</p>
+                    <div class="legal-details">
+                        <p><strong>NIB:</strong> 2505260103225</p>
+                        <p><strong>SK Kemenkumham:</strong> AHU-A091625.AH.01.30.Tahun 2026</p>
+                        <p><strong>Lokasi Kantor:</strong> Gedung Cyber, Lantai 5, Jakarta Selatan</p>
+                        <p><strong>Alamat Korea:</strong> [18530] 경기도 화성시 만세구 팔탄면 율암길 95번길 63</p>
+                        <p><strong>Email:</strong> info@songmunkorean.com | <strong>Telp:</strong> +82 10-8469-0945</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; margin-left: auto; margin-right: auto; max-width: 650px; line-height: 1.5;"><em>* PT Songmun KoreanSkill melayani seluruh siswa secara online/digital. Alamat tertera di atas hanya digunakan untuk keperluan legalitas dan korespondensi resmi.</em></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ==================== VOKASI VIEW ==================== -->
+        <section id="vokasi-view" class="view-section hidden">
+            <header class="hero-section" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.95)), url('assets/vocational_path.png');">
+                <div class="hero-content">
+                    <span class="badge badge-cyan">Program Diploma (D-2)</span>
+                    <h1>Kuliah Praktis, Langsung Kerja di Industri Manufaktur & Otomasi Korea Selatan.</h1>
+                    <p>Program khusus lulusan SMK/SMA Teknik untuk mencetak tenaga ahli internasional bersertifikasi global.</p>
+                    <button class="btn btn-primary btn-lg" onclick="openEligibilityModal('vokasi')">Cek Syarat Kelayakan & Pilih Jurusan</button>
+                </div>
+            </header>
+
+            <section class="container padding-y">
+                <div class="grid-2">
+                    <div class="text-content">
+                        <h2 class="highlight-cyan">Mengapa Jalur Vokasi D-2?</h2>
+                        <p>Korea Selatan saat ini menghadapi krisis tenaga kerja produktif di sektor teknik. Ini adalah peluang emas bagi lulusan SMK/SMA Indonesia.</p>
+                        <ul class="feature-list">
+                            <li><strong>70% Praktik Laboratorium:</strong> Kurikulum berbasis industri, bukan sekadar teori.</li>
+                            <li><strong>Peluang Visa E-7:</strong> Jalur pasti menuju visa kerja profesional paska lulus.</li>
+                            <li><strong>Sertifikasi Global:</strong> Keahlian Anda diakui di seluruh dunia.</li>
+                            <li><strong>Permintaan Tinggi:</strong> Gaji lulusan teknik di Korea sangat kompetitif (Rp 25-40 Juta/Bulan).</li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel text-center">
+                        <h3>14 Jurusan Paling Dicari</h3>
+                        <div class="majors-grid">
+                            <div class="major-box">🚗 Future Electric Vehicle (미래전기자동차과)</div>
+                            <div class="major-box">🏎️ Future Automotive Engineering (미래자동차공학부)</div>
+                            <div class="major-box">👗 Textile & Fashion Business (섬유패션비즈니스학과)</div>
+                            <div class="major-box">🌍 Global Textile & Fashion Bus. (글로벌섬유패션비즈니스과)</div>
+                            <div class="major-box">⚡ Electrical Engineering (전기공학과)</div>
+                            <div class="major-box">⚙️ Automotive Machinery (자동차기계과)</div>
+                            <div class="major-box">🖥️ 스마트CAD/CAM과</div>
+                            <div class="major-box">🏗️ Special Construction Mach. Eng. (특수건설기계공학부)</div>
+                            <div class="major-box">🔧 Mechanical Engineering (기계과)</div>
+                            <div class="major-box">🚘 Automotive Engineering (자동차과)</div>
+                            <div class="major-box">🌾 Smart Agri-Food (스마트농식품과)</div>
+                            <div class="major-box">🔋 New & Renewable Energy (신재생에너지전기과)</div>
+                            <div class="major-box">🚀 Future Mobility (미래모비리티학과)</div>
+                            <div class="major-box">⚡ Electrical Engineering (전기공학과)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ==================== CYBER VIEW ==================== -->
+        <section id="cyber-view" class="view-section hidden">
+            <header class="hero-section" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.95)), url('assets/cyber_university.png');">
+                <div class="hero-content">
+                    <span class="badge badge-cyan">Cyber University & Transfer S1</span>
+                    <h1>Raih Gelar dari Universitas Siber Korea Tanpa Melepas Pekerjaanmu.</h1>
+                    <p>Solusi kuliah hemat biaya dari Indonesia dengan opsi transfer kredit langsung ke kampus konvensional di Korea pada tahun ke-3.</p>
+                    <button class="btn btn-primary btn-lg" onclick="openEligibilityModal('cyber')">Konsultasi Skema Transfer</button>
+                </div>
+            </header>
+
+            <section class="container padding-y">
+                <div class="section-header text-center">
+                    <h2>Skema Cerdas <span class="highlight-cyan">2+2</span></h2>
+                    <p>Rahasia menghemat puluhan juta rupiah tanpa mengorbankan kualitas pendidikan.</p>
+                </div>
+                
+                <!-- Timeline 2+2 -->
+                <div class="timeline-2x2">
+                    <div class="timeline-step glass-panel">
+                        <div class="step-num">Tahun 1 & 2</div>
+                        <h3>Belajar Online dari Indonesia</h3>
+                        <p>Terdaftar di Cyber University ternama Korea. Anda bebas bekerja/magang di Indonesia. Hemat biaya hidup 100% dan nikmati <strong>Beasiswa Potongan Uang Kuliah (수업료 감면 장학) hingga 80%</strong> (hanya sekitar Rp 3,5 Juta atau 300,000 KRW / semester untuk 18 SKS).</p>
+                    </div>
+                    <div class="timeline-step glass-panel highlight-border">
+                        <div class="step-num">Tahun 3 & 4</div>
+                        <h3>Transfer ke Kampus Korea</h3>
+                        <p>Pindah ke universitas konvensional di Korea (S1). Rasakan kehidupan kampus dan lulus dengan ijazah reguler.</p>
+                    </div>
+                </div>
+
+                <!-- Tuition Cost Simulator -->
+                <div class="calculator-section glass-panel margin-t-large">
+                    <h3 class="text-center">Kalkulator Penghematan Biaya Kuliah (Simulasi 4 Tahun)</h3>
+                    <div class="calc-grid">
+                        <div class="calc-controls">
+                            <label for="cyber-tuition-cost">Biaya Kuliah Siber per Semester (Rp): <span id="cyber-tuition-cost-val">20,000,000</span></label>
+                            <input type="range" id="cyber-tuition-cost" min="15000000" max="25000000" step="1000000" value="20000000">
+                            
+                            <label for="tuition-cost">Rata-rata Uang Kuliah di Korea per Semester (Rp): <span id="tuition-cost-val">35,000,000</span></label>
+                            <input type="range" id="tuition-cost" min="20000000" max="60000000" step="1000000" value="35000000">
+                        </div>
+                        <div class="calc-results">
+                            <div class="bar-chart">
+                                <div class="bar-group">
+                                    <div class="bar-value" id="val-conv">Rp 920 Jt</div>
+                                    <div class="bar" id="bar-conv" style="height: 100%; background: #E63946;"></div>
+                                    <div class="bar-label">Konvensional (8 Sem)</div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-value" id="val-cyber">Rp 460 Jt</div>
+                                    <div class="bar" id="bar-cyber" style="height: 50%; background: #64FFDA;"></div>
+                                    <div class="bar-label">Siber 2+2</div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-value" id="val-full-cyber-50">Rp 0 Jt</div>
+                                    <div class="bar" id="bar-full-cyber-50" style="height: 30%; background: #00B4D8;"></div>
+                                    <div class="bar-label">Full Siber (Beasiswa 50%)</div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-value" id="val-full-cyber-80">Rp 0 Jt</div>
+                                    <div class="bar" id="bar-full-cyber-80" style="height: 20%; background: #48CAE4;"></div>
+                                    <div class="bar-label">Full Siber (Beasiswa 80%)</div>
+                                </div>
+                            </div>
+                            <div class="saving-badge">Maksimal Hemat: <br><span id="val-saving" class="highlight-cyan">Rp 460 Juta!</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ==================== EDUKASI VIEW ==================== -->
+        <section id="edukasi-view" class="view-section hidden">
+            <header class="page-header text-center padding-y">
+                <div class="container">
+                    <h1>Portal <span class="highlight">Edukasi</span></h1>
+                    <p>Wawasan mendalam seputar sistem pendidikan, visa, dan prospek karir di Korea Selatan.</p>
+                </div>
+            </header>
+            <section class="container padding-y">
+                <div class="blog-grid" id="edukasi-news-container">
+                    <div style="text-align: center; width: 100%; grid-column: 1 / -1; padding: 40px; color: var(--text-muted);">
+                        <p>Memuat berita terbaru dari database...</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 PT Songmun KoreanSkill. All Rights Reserved.</p>
+            <p>Pionir Konsultan Vokasi & Siber Korea di Indonesia.</p>
+        </div>
+    </footer>
+
+    <!-- Eligibility Form Modal -->
+    <div id="eligibility-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-btn">&times;</span>
+            <h2>Cek Kelayakan Anda</h2>
+            <p>Jawab 3 pertanyaan singkat untuk mendapatkan rekomendasi jalur terbaik.</p>
+            
+            <form id="quiz-form">
+                <div class="quiz-step active" id="step-1">
+                    <label>Apa pendidikan terakhir Anda?</label>
+                    <select id="q-edu" required class="form-input">
+                        <option value="">Pilih...</option>
+                        <option value="SMK Teknik">SMK Teknik / Kejuruan</option>
+                        <option value="SMA IPA/IPS">SMA IPA/IPS</option>
+                        <option value="Diploma">Diploma (D1/D2/D3)</option>
+                        <option value="S1/S2">Sarjana (S1/S2)</option>
+                    </select>
+                    <button type="button" class="btn btn-primary mt-1" onclick="nextStep(2)">Lanjut</button>
+                </div>
+                
+                <div class="quiz-step hidden" id="step-2">
+                    <label>Apa tujuan utama Anda ke Korea?</label>
+                    <select id="q-goal" required class="form-input">
+                        <option value="">Pilih...</option>
+                        <option value="Kerja di Industri">Ingin cepat kerja di industri teknik/manufaktur</option>
+                        <option value="Gelar S1">Ingin dapat gelar S1 sambil tetap bekerja/hemat</option>
+                        <option value="Belum Yakin">Hanya ingin kuliah umum / Belum yakin</option>
+                    </select>
+                    <button type="button" class="btn btn-outline mt-1" onclick="prevStep(1)">Kembali</button>
+                    <button type="button" class="btn btn-primary mt-1" onclick="nextStep(3)">Lanjut</button>
+                </div>
+
+                <div class="quiz-step hidden" id="step-3">
+                    <label>Estimasi Anggaran Awal yang disiapkan?</label>
+                    <select id="q-budget" required class="form-input">
+                        <option value="">Pilih...</option>
+                        <option value="< 50 Juta">Di bawah 50 Juta</option>
+                        <option value="50-100 Juta">50 - 100 Juta (Cocok untuk Cyber/Vokasi)</option>
+                        <option value="> 100 Juta">Di atas 100 Juta</option>
+                    </select>
+                    <button type="button" class="btn btn-outline mt-1" onclick="prevStep(2)">Kembali</button>
+                    <button type="button" class="btn btn-primary mt-1" onclick="submitQuiz()">Lihat Hasil & Hubungi WA</button>
+                </div>
+
+                <div class="quiz-step hidden text-center" id="step-result">
+                    <h3 id="result-title" class="highlight-cyan">Memproses...</h3>
+                    <p id="result-desc"></p>
+                    <a id="wa-link" href="#" target="_blank" class="btn btn-primary mt-1" style="display:inline-block; text-decoration:none;">Kirim Data ke Admin via WhatsApp</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WA Button -->
+    <a href="https://wa.me/+821084690945?text=Halo%20PT%20Songmun%20KoreanSkill,%20saya%20ingin%20konsultasi." target="_blank" class="floating-wa">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="app.js"></script>
+</body>
+</html>
