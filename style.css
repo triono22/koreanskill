@@ -196,6 +196,7 @@ h3 { font-size: 1.5rem; font-weight: 600; }
     background: rgba(100, 255, 218, 0.1);
 }
 .btn-lg { padding: 16px 32px; font-size: 1.1rem; }
+.btn-mobile-only { display: none; }
 
 .badge {
     display: inline-block;
@@ -558,6 +559,7 @@ h3 { font-size: 1.5rem; font-weight: 600; }
     .nav-links a { margin: 10px 0; }
     .hamburger { display: flex; }
     #btn-eligibility-nav { display: none; }
+    .btn-mobile-only { display: block; width: 100%; text-align: center; }
     .hero-buttons { flex-direction: column; }
     .map-container, .grid-2, .timeline-2x2, .calc-grid { grid-template-columns: 1fr; }
     .bar-chart { height: 150px; }
