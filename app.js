@@ -219,6 +219,11 @@ Mohon info pendaftarannya.`;
     const encodedMsg = encodeURIComponent(message);
     document.getElementById('wa-link').href = `https://wa.me/${waNumber}?text=${encodedMsg}`;
     
+    // Trigger Google Ads Conversion for 'Pendaftaran'
+    if (typeof gtag_report_conversion === 'function') {
+        gtag_report_conversion();
+    }
+    
     nextStep('result');
 }
 

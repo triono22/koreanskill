@@ -64,6 +64,22 @@
 
       gtag('config', 'AW-18199131711');
     </script>
+
+    <!-- Event snippet for Pendaftaran conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18199131711/cFz1CM6uqLYcEL_sguZD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
 </head>
 <body>
     <!-- Navbar -->
